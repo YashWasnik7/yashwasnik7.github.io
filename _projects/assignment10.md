@@ -47,6 +47,6 @@ Below is where we can put some links to both the data and the analysis code as b
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/YashWasnik7/assignment10" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/YashWasnik7/assignment10/blob/main/singh-vishnupriya-wasnik-yash-assignment10.ipynb" text="The Analysis" %}
 </div>
 
