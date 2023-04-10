@@ -1,8 +1,8 @@
 ---
-name: Vega Lite Example Project
+name: Homework 10
 tools: [Python, HTML, vega-lite]
 image: assets/pngs/download.png
-description: This is a "showcase" project that uses vega-lite for interactive viz!
+description: Homework 10 charts for building inventory dataset
 custom_js:
   - vega.min
   - vega-lite.min
@@ -12,8 +12,6 @@ custom_js:
 
 
 # Plot 1
-
-
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/altair_buildings_chart.json" style="width: 100%"></vegachart>
 
