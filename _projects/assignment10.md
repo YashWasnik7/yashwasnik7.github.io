@@ -23,8 +23,11 @@ We can use a vegachart HTML tag like so:
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/altair_buildings_chart.json" style="width: 100%"></vegachart>
 
-In theory, you can also use [Jekyll hooks](https://jekyllrb.com/docs/plugins/hooks/) to do it, but I haven't figured out a way that looks nice yet.
+Plot 1: Line graph showing the distribution of Mean Square Footage by Year and City.
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/altair_max_total_floors.json" style="width: 100%"></vegachart>
+
+Plot 2: Bar chart of Mean Maximum Total Floors by County.
 
 ## Search The Data & Methods
 
