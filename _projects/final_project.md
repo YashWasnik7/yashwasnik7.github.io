@@ -23,7 +23,7 @@ custom_js:
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/final_interactive_plot.json" style="width: 100%"></vegachart>
 
-Bar chart of Mean Maximum Total Floors by County.
+Click on the map to see changes
 
 ## Search The Data & Methods
 
