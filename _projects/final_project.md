@@ -56,7 +56,7 @@ Below are links to the dataset (left button) and the analysis code (right button
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/YashWasnik7/final_project_data_viz/blob/main/singh_vishnupriya_wasnik_yash_final_project_2.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/YashWasnik7/final_project_data_viz.git" text="The Analysis" %}
 </div>
 
 
