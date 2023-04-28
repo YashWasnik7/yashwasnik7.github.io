@@ -27,14 +27,14 @@ plotted the dots you see below using the Latitude and longitude data of End Comm
 ### Map
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/chicago_map.json" style="width: 100%"></vegachart>
-       **Note: All rides start from 'KENWOOD' community**
+       **Note: All rides start from 'KENWOOD' community (created by the authors)**
 
 
-### Interactive Plot
+### Interactive Plot 
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/final_interactive_plot.json" style="width: 100%"></vegachart>
 
-**Note: Select a vendor from the bar graph to view trip duration from August to December**
+**Note: Select a vendor from the bar graph to view trip duration from August to December (created by the authors)**
 
 Above is an interactive dashboard which shows the distribution of electric bike (EV) rides in Chicago area. Left side is a map of Chicago metropolitan area with circles of different colors, density and size. The bike vendors in our dataset are represented by blue, orange and green colors and the size corresponds to duration of trip.
 
@@ -48,6 +48,7 @@ Above is an interactive dashboard which shows the distribution of electric bike 
 
 The dataset of Austin is same as Chicago with the only difference being that instead of vendor type, we have vehicle type as bike, scooter and moped. The entire dataset of Austin contained only 1000 rows for years 2021 and 2022 so it was easy to plot. The plot above represents the trip duration in Austin for each vehicle type. The data was summarised so that we can get average of trip duration across all vehicle types.
 <vegachart schema-url="{{ site.baseurl }}/assets/json/austin_pie_plot.json" style="width: 100%"></vegachart>
+**(Plot created by the authors)**
 
 Pie chart is most easy and clear to represent the trip duration as we only have 3 vehicle types. Here, we added a base pie plot on top of which we defined the radius and added label (Trip Duration) for each part. As seen above, moped had the most trip duration out of all three.
 
@@ -57,7 +58,7 @@ This dataset shows the Battery Electric Vehicles (BEVs) and Plug-in Hybrid Elect
 It is seen here that Tesla has always been the top manufacturer of EVs used.
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/wash_line.json" style="width: 100%"></vegachart>
-**Note: Click on each legend to view only that model's distribution**
+**Note: Click on each legend to view only that model's distribution (plot created by the authors)**
 
 ### Data Sources and Analysis: 
 
@@ -71,7 +72,7 @@ It is seen here that Tesla has always been the top manufacturer of EVs used.
   <a href="https://raw.githubusercontent.com/lseemann/Chicago_ZIP_Codes/master/chicago_zips_topojson.json" class="button">Chicago</a>
   <a href="https://data.austintexas.gov/Transportation-and-Mobility/Shared-Micromobility-Vehicle-Trips/7d8e-dm7r" class="button">Austin</a>
   <a href="https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD" class="button">Washington</a>
-  <a href="https://github.com/YashWasnik7/final_project_data_viz.git" class="button">Analysis</a>
+  <a href="https://github.com/YashWasnik7/final_project_data_viz/blob/main/singh_vishnupriya_wasnik_yash_final_project.ipynb" class="button">Analysis</a>
 
 </div>
 
