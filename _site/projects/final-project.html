@@ -73,23 +73,41 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h2 id="chicago-map">Chicago Map</h2>
+  <h2 id="a-comparison-of-ev-usage-across-the-us">A comparison of EV usage across the US</h2>
+<h5 id="authors-vishnupriya-singh-yash-wasnik">Authors: Vishnupriya Singh, Yash Wasnik</h5>
+<p>In a big city like Chicago, EV bikes make it very convenient to navigate around the city. Other advantages of EV include zero fuel cost, versatility
+and environment friendly. Considering these benefits, we decided to plot the trip duration for EV bike rides in Chicago metroplolitan area using 
+altair and matplotlib python libraries. We analyzed the dataset using pandas and found that ‘Spin’, ‘Lime’ and ‘Bird’ were the only bike providers in
+our dataset. Hence, we first imported the data using pandas directly using the URL and filtered out Communities which had 5000 or less rows of data as
+altair has a limit of 5000 rows. Keeping this limitation in mind, we chose ‘Kenwood’ as the start community which had 3344 rows of data.</p>
+
+<p>Plotting the trip end communitites (starting at Kenwood) was another challenge as we had no map data in our original dataset. Hence, we used chicago_zips_topojson
+dataset (available on github) to plot all the ZIP codes in Chicago and this gave us the base map of Chicago region. Using the original Chicago EV dataset, we now
+plotted the dots you see below using the Latitude and longitude data of End Community drop off locations. This gave us a beautiful density plot that you see below:</p>
+
+<h4 id="chicago-map">Chicago Map</h4>
 
 <vegachart schema-url="/assets/json/chicago_map.json" style="width: 100%"></vegachart>
+<p>Note: All rides start from ‘KENWOOD’ community</p>
 
-<h2 id="bar-plot-of-time-duration-for-bike-vendors">Bar plot of time duration for bike vendors</h2>
-
-<vegachart schema-url="/assets/json/bar_plot.json" style="width: 100%"></vegachart>
-
-<h1 id="interactive-plot">Interactive Plot</h1>
+<h3 id="interactive-plot">Interactive Plot</h3>
 
 <vegachart schema-url="/assets/json/final_interactive_plot.json" style="width: 100%"></vegachart>
 
-<p>Click on the map to see changes</p>
+<p>Click on the bar to see changes the distribuion of trip duration from August to December</p>
 
-<h2 id="search-the-data--methods">Search The Data &amp; Methods</h2>
+<p>How to use the dashboard:
+Above is an interactive dashboard which shows the distribution of electric bike (EV) rides in Chicago area. Left side is a map of Chicago metropolitan area with circles of different colors, density and size. The bike vendors in our dataset are represented by blue, orange and green colors and the size corresponds to duration of trip.</p>
 
-<p>Below is where we can put some links to both the data and the analysis code as buttons:</p>
+<p>Map - To view corresponding scatter and bar plots for a vendor, user needs to click on a circle from the map. For instance, clicking on a blue circle will only show plots for ‘bird’ vendor on all 3 visualizations. To reset the dashboard, the user can click anywhere on the map. Hovering over a dot will display the trip duration and name of the community where the ride was ended.</p>
+
+<p>Bar plot - A user can also click on the horizontal bar plot to view corresponding drop locations on map and start time of each ride.</p>
+
+<p>Scatter plot - This is static plot which shows the trip duration of EV rides from August 2020 to December 2020 with trip duration on y-axis. The plot changes as per selection from either the map or the bar plot. Points close to x-axis mean that shorter trip duration and viz. For instance, selecting bird vendor from bar plot show that more trip were taken from August - September but for short durations. The trips were very less in December.</p>
+
+<h3 id="search-the-data--methods">Search The Data &amp; Methods</h3>
+
+<p>Below are links to the dataset (left button) and the analysis code (right button):</p>
 
 <!-- these are written in a combo of html and liquid -->
 
@@ -105,6 +123,7 @@
 </a>
 </div>
 
+<p>Link - https://urbanmatter.com/electric-or-auto-discover-chicagos-best-commuter-ebike-ride/#:~:text=Benefit%20of%20commuting%20with%20Electric,town%20without%20a%20sweat%20easily.</p>
 
 </div>
   </main>
