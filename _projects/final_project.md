@@ -11,7 +11,7 @@ custom_js:
 ---
 
 ## A comparison of EV usage across the US 
-##### Authors: Vishnupriya Singh, Yash Wasnik
+#### Authors: Vishnupriya Singh, Yash Wasnik
 In a big city like Chicago, EV bikes make it very convenient to navigate around the city. Other advantages of EV include zero fuel cost, versatility
 and environment friendly. Considering these benefits, we decided to plot the trip duration for EV bike rides in Chicago metroplolitan area using 
 altair and matplotlib python libraries. We analyzed the dataset using pandas and found that 'Spin', 'Lime' and 'Bird' were the only bike providers in
