@@ -27,7 +27,7 @@ plotted the dots you see below using the Latitude and longitude data of End Comm
 ### Map
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/chicago_map.json" style="width: 100%"></vegachart>
-       **Note: All rides start from 'KENWOOD' community (created by the authors)**
+**Note: All rides start from 'KENWOOD' community (created by the authors)**
 
 
 ### Interactive Plot 
