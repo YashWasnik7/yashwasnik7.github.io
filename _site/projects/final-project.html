@@ -73,8 +73,10 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h2 id="a-comparison-of-ev-usage-across-the-us">A comparison of EV usage across the US</h2>
-<h4 id="authors-vishnupriya-singh-yash-wasnik">Authors: Vishnupriya Singh, Yash Wasnik</h4>
+  <h2 id="a-comparison-of-ev-trips-across-the-us">A comparison of EV trips across the US</h2>
+<p>Authors: Vishnupriya Singh, Yash Wasnik</p>
+
+<h3 id="chicago">Chicago</h3>
 <p>In a big city like Chicago, EV bikes make it very convenient to navigate around the city. Other advantages of EV include zero fuel cost, versatility
 and environment friendly. Considering these benefits, we decided to plot the trip duration for EV bike rides in Chicago metroplolitan area using 
 altair and matplotlib python libraries. We analyzed the dataset using pandas and found that ‘Spin’, ‘Lime’ and ‘Bird’ were the only bike providers in
@@ -85,45 +87,96 @@ altair has a limit of 5000 rows. Keeping this limitation in mind, we chose ‘Ke
 dataset (available on github) to plot all the ZIP codes in Chicago and this gave us the base map of Chicago region. Using the original Chicago EV dataset, we now
 plotted the dots you see below using the Latitude and longitude data of End Community drop off locations. This gave us a beautiful density plot that you see below:</p>
 
-<h4 id="chicago-map">Chicago Map</h4>
+<h3 id="map">Map</h3>
 
 <vegachart schema-url="/assets/json/chicago_map.json" style="width: 100%"></vegachart>
-<p>Note: All rides start from ‘KENWOOD’ community</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   **Note: All rides start from 'KENWOOD' community**
+</code></pre></div></div>
 
 <h3 id="interactive-plot">Interactive Plot</h3>
 
 <vegachart schema-url="/assets/json/final_interactive_plot.json" style="width: 100%"></vegachart>
 
-<p>Click on the bar to see changes the distribuion of trip duration from August to December</p>
+<p><strong>Note: Select a vendor from the bar graph to view trip duration from August to December</strong></p>
 
-<p>How to use the dashboard:
-Above is an interactive dashboard which shows the distribution of electric bike (EV) rides in Chicago area. Left side is a map of Chicago metropolitan area with circles of different colors, density and size. The bike vendors in our dataset are represented by blue, orange and green colors and the size corresponds to duration of trip.</p>
+<p>Above is an interactive dashboard which shows the distribution of electric bike (EV) rides in Chicago area. Left side is a map of Chicago metropolitan area with circles of different colors, density and size. The bike vendors in our dataset are represented by blue, orange and green colors and the size corresponds to duration of trip.</p>
 
-<p>Map - To view corresponding scatter and bar plots for a vendor, user needs to click on a circle from the map. For instance, clicking on a blue circle will only show plots for ‘bird’ vendor on all 3 visualizations. To reset the dashboard, the user can click anywhere on the map. Hovering over a dot will display the trip duration and name of the community where the ride was ended.</p>
+<ul>
+  <li>
+    <p>Map - To view corresponding scatter and bar plots for a vendor, user needs to click on a circle from the map. For instance, clicking on a blue circle will only show plots for ‘bird’ vendor on all 3 visualizations. To reset the dashboard, the user can click anywhere on the map. Hovering over a dot will display the trip duration and name of the community where the ride was ended.</p>
+  </li>
+  <li>
+    <p>Bar plot - A user can also click on the horizontal bar plot to view corresponding drop locations on map and start time of each ride.</p>
+  </li>
+  <li>
+    <p>Scatter plot - This is static plot which shows the trip duration of EV rides from August 2020 to December 2020 with trip duration on y-axis. The plot changes as per selection from either the map or the bar plot. Points close to x-axis mean that shorter trip duration and viz. For instance, selecting bird vendor from bar plot show that more trip were taken from August - September but for short durations. The trips were very less in December.</p>
+  </li>
+</ul>
 
-<p>Bar plot - A user can also click on the horizontal bar plot to view corresponding drop locations on map and start time of each ride.</p>
+<h3 id="austin">Austin</h3>
 
-<p>Scatter plot - This is static plot which shows the trip duration of EV rides from August 2020 to December 2020 with trip duration on y-axis. The plot changes as per selection from either the map or the bar plot. Points close to x-axis mean that shorter trip duration and viz. For instance, selecting bird vendor from bar plot show that more trip were taken from August - September but for short durations. The trips were very less in December.</p>
+<p>The dataset of Austin is same as Chicago with the only difference being that instead of vendor type, we have vehicle type as bike, scooter and moped. The entire dataset of Austin contained only 1000 rows for years 2021 and 2022 so it was easy to plot. The plot above represents the trip duration in Austin for each vehicle type. The data was summarised so that we can get average of trip duration across all vehicle types.</p>
+<vegachart schema-url="/assets/json/austin_pie_plot.json" style="width: 100%"></vegachart>
 
-<h3 id="search-the-data--methods">Search The Data &amp; Methods</h3>
+<p>Pie chart is most easy and clear to represent the trip duration as we only have 3 vehicle types. Here, we added a base pie plot on top of which we defined the radius and added label (Trip Duration) for each part. As seen above, moped had the most trip duration out of all three.</p>
 
-<p>Below are links to the dataset (left button) and the analysis code (right button):</p>
+<h3 id="washington">Washington</h3>
+
+<p>This dataset shows the Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs) that are currently registered through Washington State Department of Licensing (DOL). Since, EV were made mainly after 2010, only that was used for our plot. In the line plot, the distribution of maximum electric range was shown for top 5 manufacturers Tesla, Nissan, Ford, Chevrolet and BMW. Other cars started manufacturing EVs later. 
+It is seen here that Tesla has always been the top manufacturer of EVs used.</p>
+
+<vegachart schema-url="/assets/json/wash_line.json" style="width: 100%"></vegachart>
+<p><strong>Note: Click on each legend to view only that model’s distribution</strong></p>
+
+<h3 id="data-sources-and-analysis">Data Sources and Analysis:</h3>
 
 <!-- these are written in a combo of html and liquid -->
+<!-- [Chicago](https://raw.githubusercontent.com/lseemann/Chicago_ZIP_Codes/master/chicago_zips_topojson.json)  
+[Austin](https://data.austintexas.gov/Transportation-and-Mobility/Shared-Micromobility-Vehicle-Trips/7d8e-dm7r) <br />
+[Washington](https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD) -->
 
-<div class="left">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://raw.githubusercontent.com/lseemann/Chicago_ZIP_Codes/master/chicago_zips_topojson.json'">
-  The Data
-</a>
+<div>
+  <a href="https://raw.githubusercontent.com/lseemann/Chicago_ZIP_Codes/master/chicago_zips_topojson.json" class="button">Chicago</a>
+  <a href="https://data.austintexas.gov/Transportation-and-Mobility/Shared-Micromobility-Vehicle-Trips/7d8e-dm7r" class="button">Austin</a>
+  <a href="https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD" class="button">Washington</a>
+  <a href="https://github.com/YashWasnik7/final_project_data_viz.git" class="button">Analysis</a>
+
 </div>
 
-<div class="right">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/YashWasnik7/final_project_data_viz.git">
-  The Analysis
-</a>
-</div>
+<style>
+  .button {
+    display: inline-block;
+    padding: 20px;
+    background-color: white;
+    color: blue;
+    text-decoration: grey;
+    border-radius: 5px;
+    margin-right: 60px;
+  }
+</style>
 
-<p>Link - https://urbanmatter.com/electric-or-auto-discover-chicagos-best-commuter-ebike-ride/#:~:text=Benefit%20of%20commuting%20with%20Electric,town%20without%20a%20sweat%20easily.</p>
+<h2 id="references">References:</h2>
+<ol>
+  <li>
+    <p><a href="https://uiuc-ischool-dataviz.github.io/is445_oauoag_spring2023/nbv.html?notebook_name=%2Fis445_oauoag_spring2023%2Fweek03%2FinClass_week03.ipynb">https://uiuc-ischool-dataviz.github.io/is445_oauoag_spring2023/nbv.html?notebook_name=%2Fis445_oauoag_spring2023%2Fweek03%2FinClass_week03.ipynb</a></p>
+  </li>
+  <li>
+    <p><a href="https://towardsdatascience.com/3-ways-to-build-a-geographical-map-in-python-altair-77c8e0781538">https://towardsdatascience.com/3-ways-to-build-a-geographical-map-in-python-altair-77c8e0781538</a></p>
+  </li>
+  <li>
+    <p><a href="https://altair-viz.github.io/altair-tutorial/notebooks/06-Selections.html">https://altair-viz.github.io/altair-tutorial/notebooks/06-Selections.html</a></p>
+  </li>
+  <li>
+    <p><a href="https://altair-viz.github.io/gallery/pie_chart_with_labels.html">https://altair-viz.github.io/gallery/pie_chart_with_labels.html</a></p>
+  </li>
+  <li>
+    <p><a href="https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2">https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2</a></p>
+  </li>
+  <li>
+    <p><a href="https://urbanmatter.com/electric-or-auto-discover-chicagos-best-commuter-ebike-ride/#:~:text=Benefit%20of%20commuting%20with%20Electric,town%20without%20a%20sweat%20easily.">https://urbanmatter.com/electric-or-auto-discover-chicagos-best-commuter-ebike-ride/#:~:text=Benefit%20of%20commuting%20with%20Electric,town%20without%20a%20sweat%20easily.</a></p>
+  </li>
+</ol>
+
 
 </div>
   </main>
